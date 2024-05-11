@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Supply Chain Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"> 
+    </script>
+</head>
+<body>
+    <h1>Blockchain Supply Chain Management</h1>
+    <h2>Create Transaction</h2>
+    <input type="text" id="sender" placeholder="Sender">
+    <input type="text" id="recipient" placeholder="Recipient">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="createTransaction()">Create Transaction</button>
+    
+
+    <h2>Mine Block</h2>
+    <button onclick="mineBlock()">Mine Block</button>
+
+    <h2>Blockchain</h2>
+    <button onclick="getChain()">Get Blockchain</button>
+    <pre id="chain"></pre>
+
+    <script>
+        const apiUrl = 'http://localhost:5000';
+
+        function createTransaction() {
+            const sender = document.getElementById('sender').value;
+            const recipient = document.getElementById('recipient').value;
+            const amount = document.getElementById('amount').value;
+
+            `$.ajax({
+                type: 'POST',
+                url: ${apiUrl}/transactions/new,
+                contentType: 'application/json',
+                data: JSON.stringify({ sender, recipient, amount }),
+                success: function(response) {
+                    alert(response.message);
+                },
+                error: function(error) {
+                    alert('Error creating transaction.');
+                }
+            })`;
+        }
+
+        function mineBlock() {
+            `$.ajax({
+                type: 'GET',
+                url: ${apiUrl}/mine,
+                success: function(response) {
+                    alert(response.message);
+                },
+                error: function(error) {
+                    alert('Error mining block.');
+                }
+            })`;
+        }
+
+        function getChain() {
+            `$.ajax({
+                type: 'GET',
+                url: ${apiUrl}/chain,
+                success: function(response) {
+                    document.getElementById('chain').textContent = JSON.stringify(response, null, 2);
+                },
+                error: function(error) {
+                    alert('Error getting blockchain.');
+                }
+            })`;
+        }
+    </script>
+</body>
+</html>

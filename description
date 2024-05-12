@@ -1,0 +1,10 @@
+Problem Statement : Secure and Transparent Supply Chain Management with Blockchain. 
+Solution Proposed by Unstoppable Coder:
+1) We are trying to make  Secure and Transparent Supply Chain Management with Blockchain.This includes defining the fields, data types, and validation rules for each transaction.
+2)We are trying to design the consensus Mechanism ,that will be used to valid transaction and create new blocks. Popular consensus mechanisms include Proof of Work (PoW), Proof of Stake (PoS), and Delegated Proof of Stake (DPoS).
+3)We are choosing  the programming language and development framework:such programming languages are  Java, Python, JavaScript, C++, or Solidity, and development frameworks, such as Ethereum, Hyperledger Fabric, or Corda.
+4)Implement the blockchain nodes that will form the network and communicate with each other. Each node will maintain a copy of the blockchain and will be responsible for validating transactions and adding new blocks.
+5)We will  Develop the smart contracts that will be deployed on the blockchain. Smart contracts are self-executing programs that can automate the execution of complex business logic and enforce the rules of the blockchain.
+6)Test the blockchain thoroughly to ensure that it functions as intended and is secure against attacks. Deploy the blockchain on a public or private network, depending on the use case.
+7) We will Maintain and upgrade the blockchain as needed to fix bugs, we will try to add new features, and improve performance.
+8)Since blockchain consist of many chains so it becomes Impossible to Hack Such a System 
